@@ -7,6 +7,13 @@ let App = express();
 App.use(cors());
 App.use(express.json());
 
+App.get("/",(req,res)=>{
+    res.send({
+        activeStatus:true,
+        error:false,
+    })
+})
+
 let genAI= new GoogleGenerativeAI(process.env.KEY)
 let model=genAI.getGenerativeModel({model:"gemini-2.5-flash"})
 
