@@ -16,7 +16,7 @@ export function App() {
     setLoading(true);
 
     axios
-      .post("https://realtime-ai-chat-bot-git-main-yash-shifts-projects.vercel.app/ask", { question })
+      .post("https://realtime-ai-chat-bot.vercel.app/ask", { question })
       .then((res) => {
         if (res.data._status) {
           setData(res.data.finaldata);
