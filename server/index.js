@@ -4,7 +4,7 @@ require("dotenv").config();
 let { GoogleGenerativeAI } = require("@google/generative-ai");
 
 let App = express();
-App.use(cors({origin:["https://realtime-ai-chat-bot-taio.vercel.app/"]}));
+App.use(cors());
 App.use(express.json());
 
 App.get("/",(req,res)=>{
